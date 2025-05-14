@@ -34,19 +34,18 @@ const ClientSchema = new Schema(
       requerid: true
     },
     phone: {
-        type: String,
-        requerid: true
-    },
-    year: {
-      type: Number,
+      type: String,
+      match: [/^\d{4}([- ]?)\d{4}$/,],
       requerid: true
     },
-    duration: {
-      type: Number,
+    address: {
+      type: String,
+      maxLength: 300,
       requerid: true
     },
-    image: {
-      type: String
+    active: {
+      type: Boolean,
+      requerid: true
     }
   },
   {
